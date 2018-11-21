@@ -1,22 +1,24 @@
-﻿using System;
+using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Text;
 using System.Threading.Tasks;
-using System.Windows.Forms;
 
-namespace MovieInfoPage
+namespace MovieApp
+
 {
-    static class Program
+    class Program
     {
-        /// <summary>
-        /// The main entry point for the application.
-        /// </summary>
-        [STAThread]
-        static void Main()
+        static void Main(string[] args)
         {
-            Application.EnableVisualStyles();
-            Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new Form1());
+            Movie test = new Movie("Chidori", "Sasuke", 100, "Action", "The fuckin coolest attack",
+                new DateTime(2018, 3, 1), 10.0);
+
+            Console.WriteLine(test.getTitle());
+            Console.Read();
+
+     
+           
         }
     }
 }
