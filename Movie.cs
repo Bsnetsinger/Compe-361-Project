@@ -1,119 +1,37 @@
-﻿//Programmer: Cedric Miller
-//RedID: 821235643
-//File name: Movie.cs (all methods)
-//DateCreated: 11/16/2018
-
-//Programmer: 
-//RedID: 
-//File name:
-//DateCreated: 
-
-
-
-
-
-
-using System;
+﻿using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace MovieApp
+namespace MovieInfoPage
 {
-    class Movie : IComparable<Movie>
+    class Movie
     {
-        private String Title;
-        private String Director;
-        private int Length;
-        private String Genre;
-        private String Synopsis;
-        private DateTime ReleaseDate;
-        private double Rating;
 
+        public string Length { get; set; }
 
-        public Movie()
+        public string Summary { get; set; }
+
+        public string Image { get; set; }
+
+        public string Title { get; set; }
+
+        public static Movie GetMovie()
         {
-            Title = "No title yet";
-            Director = "No director yet";
-            Length = 0;
-            Genre = " No genre yet";
-            Synopsis = "No synopsis yet";
-            ReleaseDate = DateTime.Now;
-            Rating = 0.0;
-        }
-
-        public Movie(String title, String director, int length, String genre, String synopsis,
-            DateTime releaseDate, double rating)
-        {
-            Title = title;
-            Director = director;
-            Length = length;
-            Genre = genre;
-            Synopsis = synopsis;
-            ReleaseDate = releaseDate;
-            Rating = rating;
-
-        }
-
-        public String getTitle()
-        {
-            return Title;
-        }
-
-        public String getDirector()
-        {
-            return Director;
-        }
-
-        public int getLength()
-        {
-            return Length;
-        }
-
-        public String getGenre()
-        {
-            return Genre;
-        }
-
-        public String getSynopsis()
-        {
-            return Synopsis;
-        }
-
-        public DateTime getReleaseDate()
-        {
-            return ReleaseDate;
-        }
-
-        public double getRating()
-        {
-            return Rating;
-        }
-        public int CompareTo(Movie obj)
-        {
-            if (obj == null) return 1;
-
-            return this.Title.CompareTo(obj.getTitle());
-            
-        }
-
-        public Boolean Equals(Movie obj)
-        {
-            if (obj == null) return false;
-
-            if (this.Title.Equals(obj.getTitle()) && this.Director.Equals(obj.getDirector())
-                && this.Length == obj.getLength() && this.Genre.Equals(obj.getGenre())
-                && this.ReleaseDate.Equals(obj.getReleaseDate()))
+            var temp = new Movie()
             {
-                return true;
-            }
-            else
-            {
-                return false;
-            }
+                Length = "2:10",
+                Image = "https://m.media-amazon.com/images/M/MV5BY2NkZjEzMDgtN2RjYy00YzM1LWI4ZmQtMjIwYjFjNmI3ZGEwXkEyXkFqcGdeQXVyNzkwMjQ5NzM@._V1_SX667_CR0,0,667,999_AL_.jpg",
+                Summary = "The story of Henry Hill and his life in the mob, covering his relationship with his wife Karen Hill and his mob partners Jimmy Conway and Tommy DeVito in the Italian-American crime syndicate.",
+                Title = "Goodfellas"
+            };
+
+            return temp;
+
         }
 
 
     }
+    
 }
