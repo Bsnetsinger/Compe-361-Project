@@ -19,3 +19,7 @@ Uploaded updated Meeting Minutes and Shared Links pdf files. Meeting Minutes inc
 
 11/28 
 Redesigned the Movie info page in UWP format. Created a Movie class for testing and formatted the UI to be bound by the Movie object being sent to it, ie, the Title, Summary, Length, and Image. Now any movie object that is clicked on will be displayed on the page. Files included are MainPage.xaml, MainPage.xaml.cs, and Movie.cs -Bradley
+
+11/29
+Removed some files due to compatibility issues, reworking them in order to get everything into one project
+
