@@ -51,7 +51,7 @@ namespace MovieInfoPage
             return this.getUsername().CompareTo(obj.getUsername());
         }
 
-        private void setBan(bool ban) { this.banned = ban;  }
+        public void setBan(bool ban) { this.banned = ban;  }
 
     }
 }

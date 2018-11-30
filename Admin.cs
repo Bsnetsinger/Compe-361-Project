@@ -31,24 +31,15 @@ namespace MovieInfoPage
 
         public void setList(LinkedList<User> list) { this.userList = list; }
 
-        public bool banUser(string username)
+        public bool banUser(User user)
         {
-            if (!userList.Contains(new User("", "", username,"",0,'m')))
+            if (!userList.Contains(user))
                 return false;
 
-            userList.Remove(new User("", "", username, "", 0, 'm'));
+            user.setBan(true);
             return true;
         }
 
-        public bool deleteUser(string username)
-        {
-
-        }
-
-        //public User serchUser(string username)
-        //{
-        //    if (!userList.Contains(new User("", "", username, "", 0, 'm')))
-        //        return null;
-            
-        //}
+        public bool deleteUser(User user) =>userList.Remove(user);
+    }
 }
