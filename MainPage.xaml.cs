@@ -24,11 +24,23 @@ namespace MovieInfoPage
 
     public partial class MainPage : Page
     {
+        Movie movie = new Movie("Goodfellas", "Martin Scor", 130, "Drama",
+               "the story of henry hill and his life in the mob, covering his relationship with his wife karen hill and his mob partners jimmy conway and tommy devito in the italian-american crime syndicate.",
+               new DateTime(1990, 9, 19), 8.7, "https://m.media-amazon.com/images/M/MV5BY2NkZjEzMDgtN2RjYy00YzM1LWI4ZmQtMjIwYjFjNmI3ZGEwXkEyXkFqcGdeQXVyNzkwMjQ5NzM@._V1_SX667_CR0,0,667,999_AL_.jpg");
+
+
+        //Movie movie = new Movie("Goodfellas", 130, 
+        //       "the story of henry hill and his life in the mob, covering his relationship with his wife karen hill and his mob partners jimmy conway and tommy devito in the italian-american crime syndicate.",
+        //        "https://m.media-amazon.com/images/M/MV5BY2NkZjEzMDgtN2RjYy00YzM1LWI4ZmQtMjIwYjFjNmI3ZGEwXkEyXkFqcGdeQXVyNzkwMjQ5NzM@._V1_SX667_CR0,0,667,999_AL_.jpg");
+
         public MainPage()
         {
             this.InitializeComponent();
 
-            DataContext = Movie.GetMovie();
+           
+            
+
+            DataContext = movie;
 
             
         }

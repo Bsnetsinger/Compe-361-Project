@@ -12,12 +12,30 @@
         <Image Source="{Binding Image}" Margin="109,132,795,131" />
         <Button Content="Back&#xD;&#xA;" HorizontalAlignment="Left" Height="57" Margin="54,43,0,0" VerticalAlignment="Top" Width="160" FontSize="36"/>
         <TextBlock HorizontalAlignment="Left" Height="122" Margin="750,176,0,0" Text="{Binding Title}" TextWrapping="Wrap" VerticalAlignment="Top" Width="708" FontSize="55" TextLineBounds="Full"/>
-        <TextBlock x:Name="LengthTitle" HorizontalAlignment="Left" Height="50" Margin="750,342,0,0" Text="Length:" TextWrapping="Wrap" VerticalAlignment="Top" Width="103" FontSize="24"/>
-        <TextBlock x:Name="Length" HorizontalAlignment="Left" Height="41" Margin="904,342,0,0" Text="{Binding Length}" TextWrapping="Wrap" VerticalAlignment="Top" Width="91" FontSize="24"/>
-        <TextBlock x:Name="SummaryTitle" HorizontalAlignment="Left" Height="36" Margin="750,403,0,0" Text="Summary:" TextWrapping="Wrap" VerticalAlignment="Top" Width="129" FontSize="24"/>
-        <TextBlock x:Name="Summary" HorizontalAlignment="Left" Height="220" Margin="904,403,0,0" 
-                   Text="{Binding Summary}" 
+        <TextBlock x:Name="LengthTitle" HorizontalAlignment="Left" Height="50" Margin="743,563,0,0" Text="Length:" TextWrapping="Wrap" VerticalAlignment="Top" Width="103" FontSize="24"/>
+        <TextBlock x:Name="SummaryTitle" HorizontalAlignment="Left" Height="36" Margin="743,621,0,0" Text="Summary:" TextWrapping="Wrap" VerticalAlignment="Top" Width="129" FontSize="24"/>
+        <TextBlock x:Name="Summary" HorizontalAlignment="Left" Height="220" Margin="853,625,0,0" 
+                   Text="{Binding Synopsis}" 
                    TextWrapping="Wrap" VerticalAlignment="Top" Width="515" FontSize="24"/>
+        <TextBlock x:Name="DirectorTitle" HorizontalAlignment="Left" Margin="743,407,0,0" Text="Director:" TextWrapping="Wrap" VerticalAlignment="Top" RenderTransformOrigin="-0.685,0.99" FontSize="24" Width="105"/>
+        <TextBlock x:Name="GenreTitle" HorizontalAlignment="Left" Margin="743,443,0,0" Text="Genre: " TextWrapping="Wrap" VerticalAlignment="Top" Width="85" FontSize="24"/>
+        <TextBlock x:Name="RatingTitle" HorizontalAlignment="Left" Margin="743,526,0,0" Text="Rating:" TextWrapping="Wrap" VerticalAlignment="Top" FontSize="24" Width="83"/>
+        <TextBlock x:Name="Director" HorizontalAlignment="Left" Height="28" Margin="839,407,0,0" 
+            Text="{Binding Director}" 
+            TextWrapping="Wrap" VerticalAlignment="Top" Width="174" FontSize="24"/>
+        <TextBlock x:Name="ReleaseDateTitle" HorizontalAlignment="Left" Margin="743,0,0,0" Text="Release Date:" TextWrapping="Wrap" VerticalAlignment="Center" Width="149" FontSize="24"/>
+        <TextBlock x:Name="Genre" HorizontalAlignment="Left" Height="28" Margin="821,443,0,0" 
+            Text="{Binding Genre}" 
+            TextWrapping="Wrap" VerticalAlignment="Top" Width="174" FontSize="24"/>
+        <TextBlock x:Name="ReleaseDate" HorizontalAlignment="Left" Height="28" Margin="889,484,0,0" 
+            Text="{Binding ReleaseDate}" 
+            TextWrapping="Wrap" VerticalAlignment="Top" Width="269" FontSize="24"/>
+        <TextBlock x:Name="Rating" HorizontalAlignment="Left" Height="28" Margin="821,526,0,0" 
+            Text="{Binding Rating}" 
+            TextWrapping="Wrap" VerticalAlignment="Top" Width="174" FontSize="24"/>
+        <TextBlock x:Name="Length" HorizontalAlignment="Left" Height="28" Margin="826,563,0,0" 
+            Text="{Binding Length}" 
+            TextWrapping="Wrap" VerticalAlignment="Top" Width="174" FontSize="24"/>
 
 
 
