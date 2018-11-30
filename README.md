@@ -23,3 +23,5 @@ Redesigned the Movie info page in UWP format. Created a Movie class for testing 
 11/29
 Removed some files due to compatibility issues, reworking them in order to get everything into one project
 
+11/29
+added person.cs, user.cs, admin.cs files. admin.cs is not complete   -    Joseph
