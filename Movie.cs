@@ -6,32 +6,119 @@ using System.Threading.Tasks;
 
 namespace MovieInfoPage
 {
-    class Movie
-    {
-
-        public string Length { get; set; }
-
-        public string Summary { get; set; }
-
-        public string Image { get; set; }
-
-        public string Title { get; set; }
-
-        public static Movie GetMovie()
+    
+    
+        class Movie :IComparable<Movie>
         {
-            var temp = new Movie()
-            {
-                Length = "2:10",
-                Image = "https://m.media-amazon.com/images/M/MV5BY2NkZjEzMDgtN2RjYy00YzM1LWI4ZmQtMjIwYjFjNmI3ZGEwXkEyXkFqcGdeQXVyNzkwMjQ5NzM@._V1_SX667_CR0,0,667,999_AL_.jpg",
-                Summary = "The story of Henry Hill and his life in the mob, covering his relationship with his wife Karen Hill and his mob partners Jimmy Conway and Tommy DeVito in the Italian-American crime syndicate.",
-                Title = "Goodfellas"
-            };
+            public String Title { get; set; }
+            public String Director { get; set; }
+            public int Length { get; set; }
+            public String Genre { get; set; }
+            public String Synopsis { get; set; }
+            public DateTime ReleaseDate { get; set; }
+            public double Rating { get; set; }
+            public String Image { get; set; }
 
-            return temp;
+
+        public Movie()
+            {
+                Title = "No title yet";
+                Director = "No director yet";
+                Length = 0;
+                Genre = " No genre yet";
+                Synopsis = "No synopsis yet";
+                ReleaseDate = DateTime.Now;
+                Rating = 0.0;
+            }
+
+            public Movie(String title, String director, int length, String genre, String synopsis,
+                DateTime releaseDate, double rating, string image)
+            {
+                Title = title;
+                Director = director;
+                Length = length;
+                Genre = genre;
+                Synopsis = synopsis;
+                ReleaseDate = releaseDate;
+                Rating = rating;
+                Image = image;
+
+            }
+
+        public Movie(String title,  int length, String synopsis, string image)
+        {
+            Title = title;
+            
+            Length = length;
+           
+            Synopsis = synopsis;
+           
+            Image = image;
 
         }
 
 
+
+        //public String getTitle()
+        //    {
+        //        return Title;
+        //    }
+
+        //    public String getDirector()
+        //    {
+        //        return Director;
+        //    }
+
+        //    public int getLength()
+        //    {
+        //        return Length;
+        //    }
+
+        //    public String getGenre()
+        //    {
+        //        return Genre;
+        //    }
+
+        //    public String getSynopsis()
+        //    {
+        //        return Synopsis;
+        //    }
+
+        //public DateTime getReleaseDate()
+        //{
+        //    return ReleaseDate;
+        //}
+
+        //public double getRating()
+        //{
+        //    return Rating;
+        //}
+        public int CompareTo(Movie obj)
+        {
+            if (obj == null) return 1;
+
+            return this.Title.CompareTo(obj.Title);
+
+        }
+
+        public Boolean equals(Movie obj)
+        {
+            if (obj == null) return false;
+
+            if (this.Title.Equals(obj.Title) && this.Director.Equals(obj.Director)
+                && this.Length == obj.Length && this.Genre.Equals(obj.Genre)
+                && this.ReleaseDate.Equals(obj.ReleaseDate))
+            {
+                return true;
+            }
+            else
+            {
+                return false;
+            }
+        }
+
+
     }
-    
+
+
 }
