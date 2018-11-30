@@ -25,3 +25,6 @@ Removed some files due to compatibility issues, reworking them in order to get e
 
 11/29
 added person.cs, user.cs, admin.cs files. admin.cs is not complete   -    Joseph
+
+11/29
+Started work on user login, SQL connection for user creation/storage not working. User login not currently committed due to potential file conflictions. -Austin
